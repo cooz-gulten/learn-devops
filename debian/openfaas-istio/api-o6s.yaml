@@ -1,0 +1,44 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: api-o6s-io
+  namespace: openfaas
+spec:
+  selector:
+    istio: ingressgateway # use istio default controller
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - api.o6s.io
+  - port:
+      number: 443
+      name: https
+      protocol: HTTPS
+    tls:
+      mode: SIMPLE
+      credentialName: api-o6s-io
+    hosts:
+    - api.o6s.io
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: api-o6s-io
+  namespace: openfaas
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - api-o6s-io   
+  http:
+  - match:
+    - uri:
+        prefix: /function
+    route:
+    - destination:
+        host: gateway
+        port:
+          number: 8080

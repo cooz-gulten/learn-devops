@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -o k8s
+    kompose.version: 1.26.1 (HEAD)
+  labels:
+    app: grpc-test-routegroup
+    io.kompose.service: rg1
+  name: rg1
+spec:
+  ports:
+    - name: grpc
+      port: 50051
+      targetPort: 50051
+  selector:
+    io.kompose.service: rg1
+status:
+  loadBalancer: {}

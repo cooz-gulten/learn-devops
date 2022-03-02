@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: api-o6s-io
+  namespace: istio-system
+spec:
+  secretName: api-o6s-io
+  commonName: api.o6s.io
+  dnsNames:
+  - api.o6s.io
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer

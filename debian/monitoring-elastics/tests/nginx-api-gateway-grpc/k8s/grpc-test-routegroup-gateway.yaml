@@ -1,0 +1,32 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: grpc-test-routegroup
+spec:
+  selector:
+    istio: ingressgateway # use istio default controller
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: GRPC
+    hosts:
+    - "*"
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: grpc-test-routegroup
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - grpc-test-routegroup
+  http:
+  - match:
+    - port: 30051
+    route:
+    - destination:
+        host: rg1
+        port:
+          number: 50051

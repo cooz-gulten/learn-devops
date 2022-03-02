@@ -1,0 +1,1 @@
+{"buildTargets":["app_hw1","app_lb","app_rg1","build_gateway","build_helloworld","build_routeguide","gen_key"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

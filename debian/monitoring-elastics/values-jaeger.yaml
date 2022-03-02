@@ -1,0 +1,39 @@
+storage:
+  type: elasticsearch
+  elasticsearch:
+    host: elk-coordinating-only
+    port: 9200
+    scheme: https
+    user: elastic
+    password: 1FWH4FNFEUQS7XOT0XVD
+provisionDataStore:
+  cassandra: false
+  elasticsearch: false
+query:
+  cmdlineParams:
+    es.tls.ca: "/tls/es.pem"
+  extraConfigmapMounts:
+    - name: jaeger-tls
+      mountPath: /tls
+      subPath: ""
+      configMap: jaeger-tls
+      readOnly: true
+collector:
+  cmdlineParams:
+    es.tls.ca: "/tls/es.pem"
+  extraConfigmapMounts:
+    - name: jaeger-tls
+      mountPath: /tls
+      subPath: ""
+      configMap: jaeger-tls
+      readOnly: true
+spark:
+  enabled: true
+  cmdlineParams:
+    java.opts: "-Djavax.net.ssl.trustStore=/tls/trust.store -Djavax.net.ssl.trustStorePassword=changeit"
+  extraConfigmapMounts:
+    - name: jaeger-tls
+      mountPath: /tls
+      subPath: ""
+      configMap: jaeger-tls
+      readOnly: true

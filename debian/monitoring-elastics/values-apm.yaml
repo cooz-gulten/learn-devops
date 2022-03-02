@@ -1,0 +1,27 @@
+apmConfig:
+  apm-server.yml: |
+    apm-server:
+      host: "0.0.0.0:8200"
+      kibana.enabled: true
+      kibana.host: "elk-kibana:5601"
+      # kibana.protocol: "http"
+      # kibana.username: "elastic"
+      # kibana.password: ""
+    setup:
+      kibana.host: "elk-kibana:5601"
+      template.settings.index.number_of_replicas: 0
+    queue: {}
+    output.elasticsearch:
+      hosts: ["http://elk-coordinating-only:9200"]
+      # username: "${ELASTICSEARCH_USERNAME}"
+      # password: "${ELASTICSEARCH_PASSWORD}"
+      ## If SSL is enabled
+      # protocol: https
+      # ssl.certificate_authorities:
+      #  - /usr/share/apm-server/config/certs/elastic-ca.pem
+replicas: 1
+extraEnvs:
+  - name: "ELASTICSEARCH_USERNAME"
+    value: "elastic"
+  - name: "ELASTICSEARCH_PASSWORD"
+    value: ""

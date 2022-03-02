@@ -1,0 +1,7 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/afandy/Downloads/nginx-api-gateway-grpc'
+docker build -t afandy/grpc-example-helloworld:latest . -f helloworld.Dockerfile
+docker push afandy/grpc-example-helloworld:latest
+ 
+make: Leaving directory `/Users/afandy/Downloads/nginx-api-gateway-grpc'
+ 

@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -o k8s
+    kompose.version: 1.26.1 (HEAD)
+  creationTimestamp: null
+  labels:
+    app: grpc-test-routegroup
+    io.kompose.service: rg1
+  name: rg1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: rg1
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -o k8s
+        kompose.version: 1.26.1 (HEAD)
+      labels:
+        io.kompose.service: rg1
+    spec:
+      containers:
+        - image: afandy/grpc-example-routeguide:latest
+          name: rg1
+          ports:
+            - containerPort: 50051
+          resources: {}
+      restartPolicy: Always
+status: {}
