@@ -6,9 +6,7 @@
 
 1. Install microk8s
 
-```bash
-sudo snap install microk8s --classic --channel=1.21
-```
+[click here](../microk8s/README.md)
 
 2. Join the Group
 
