@@ -24,6 +24,10 @@ Jalankan seluruh service di local pc dengan command docker compose.
 docker-compose up -d
 ```
 
+## Install Elastic Search
+
+
+
 ## Run Jaeger in Kubernetes
 
 ### Prerequisites
@@ -51,3 +55,4 @@ helm upgrade -i my-tracing open-telemetry/opentelemetry-collector
 ## Sources
 - [Open Telemetry Docker Compose](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/examples/tracing)
 - [Open Telemetry Helm Charts](https://github.com/open-telemetry/opentelemetry-helm-charts/tree/main/charts/opentelemetry-collector)
+- https://staffordwilliams.com/blog/2021/02/01/minimal-elasticsearch-resources-in-kubernetes/

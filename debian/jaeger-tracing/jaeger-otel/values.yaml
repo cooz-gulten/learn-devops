@@ -7,3 +7,27 @@ opentelemetry-collector:
     enabled: false
   standaloneCollector:
     enabled: true
+
+jaeger:
+  provisionDataStore.cassandra: false
+  storage.type: elasticsearch
+  storage.elasticsearch.host: my-tracing-elasticsearch-master
+  storage.elasticsearch.port: 9200
+
+elasticsearch:
+  singleNode: true
+  antiAffinity: "soft"
+  esJavaOpts: "-Xmx47m -Xms47m"
+  image: docker.elastic.co/elasticsearch/elasticsearch-oss
+  resources:
+    requests:
+      memory: "100Mi"
+      cpu: "10m"
+    limits:
+      memory: "250Mi"
+      cpu: "800m"
+  volumeClaimTemplate:
+    accessModes: [ "ReadWriteOnce" ]
+    resources:
+      requests:
+        storage: 1Gi

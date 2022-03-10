@@ -29,3 +29,6 @@ dependencies:
   - name: "opentelemetry-collector"
     repository: "https://open-telemetry.github.io/opentelemetry-helm-charts"
     version: 0.9.5
+  - name: "elasticsearch"
+    repository: "https://helm.elastic.co"
+    version: 7.17.1
