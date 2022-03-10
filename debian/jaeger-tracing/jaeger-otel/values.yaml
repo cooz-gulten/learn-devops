@@ -22,6 +22,7 @@ elasticsearch:
   antiAffinity: "soft"
   esJavaOpts: "-Xmx47m -Xms47m"
   image: docker.elastic.co/elasticsearch/elasticsearch-oss
+  imageTag: 7.10.2
   resources:
     requests:
       memory: "100Mi"
