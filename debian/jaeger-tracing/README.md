@@ -10,7 +10,7 @@ gul.topic: tutorial
 ---
 # Jaeger Tracing client connect with Open Telemetry
 
-Artikel ini membahas Bagaimana memonitor `http-requests` aplikasi kita dengan Jaeger Tracing. 
+Artikel ini membahas bagaimana memonitor `http-requests` aplikasi kita dengan Jaeger Tracing. 
 
 Untuk mempelajari lebih lanjut tentang jaeger silahka kunjungi [Dokumentasi Jaeger](https://www.jaegertracing.io/docs/1.32/)
 
