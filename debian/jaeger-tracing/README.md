@@ -1,11 +1,11 @@
 ---
 title: Jaeger Tracing 
-description: Briefing about Blazor.
+description: Base knowledge Jaeger Tracing.
 author: afandy
 linkedin: https://www.linkedin.com/in/afandylamusu/
 gul.author: afandy
 gul.date: 03/10/2022
-gul.custom: vs-dotnet-blazor
+gul.custom: devops-jaegertracing
 gul.topic: tutorial
 ---
 # Jaeger Tracing
