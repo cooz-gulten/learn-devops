@@ -31,4 +31,4 @@ dependencies:
     version: 0.9.5
   - name: "elasticsearch"
     repository: "https://helm.elastic.co"
-    version: 7.17.1
+    version: 7.10.2
