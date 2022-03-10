@@ -5,5 +5,8 @@ dependencies:
 - name: opentelemetry-collector
   repository: https://open-telemetry.github.io/opentelemetry-helm-charts
   version: 0.9.5
-digest: sha256:642a7af6e1fce28df8bc7ca6e6933de1e3f2b68856db18eee63146e84baf080c
-generated: "2022-03-10T13:55:37.235112+07:00"
+- name: elasticsearch
+  repository: https://helm.elastic.co
+  version: 7.17.1
+digest: sha256:e4537b8ca85d028ef839eea0bae508b405c689ba6103542549ff5c78a9d1b5c6
+generated: "2022-03-10T15:17:29.319241+07:00"
