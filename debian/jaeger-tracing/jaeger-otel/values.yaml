@@ -9,10 +9,13 @@ opentelemetry-collector:
     enabled: true
 
 jaeger:
-  provisionDataStore.cassandra: false
-  storage.type: elasticsearch
-  storage.elasticsearch.host: my-tracing-elasticsearch-master
-  storage.elasticsearch.port: 9200
+  provisionDataStore:
+    cassandra: false
+  storage:
+    type: elasticsearch
+    elasticsearch:
+      host: elasticsearch-master
+      port: 9200
 
 elasticsearch:
   singleNode: true
