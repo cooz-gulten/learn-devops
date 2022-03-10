@@ -1,6 +1,6 @@
 ---
-title: Jaeger Tracing 
-description: Base knowledge Jaeger Tracing.
+title: Jaeger Tracing client connect with Open Telemetry
+description: How to send tracing via opentelemetry to Jaeger Tracing.
 author: afandy
 linkedin: https://www.linkedin.com/in/afandylamusu/
 gul.author: afandy
@@ -8,36 +8,47 @@ gul.date: 03/10/2022
 gul.custom: devops-jaegertracing
 gul.topic: tutorial
 ---
-# Jaeger Tracing
+# Jaeger Tracing client connect with Open Telemetry
 
-This article teaches you how to create and run a "Hello World!" .NET app.
+Artikel ini membahas Bagaimana memonitor `http-requests` aplikasi kita dengan Jaeger Tracing. 
 
-If you're unsure what .NET is, start with the [.NET introduction](introduction.md).
+Untuk mempelajari lebih lanjut tentang jaeger silahka kunjungi [Dokumentasi Jaeger](https://www.jaegertracing.io/docs/1.32/)
 
-## Create an application
+## Run Jaeger with Docker Compose
 
-First, download and install the [.NET SDK](https://dotnet.microsoft.com/download/dotnet) on your computer.
+Pastikan anda memiliki `docker-engine` di pc/laptop. Jika belum silahkan download dan install [**docker for desktop**](https://docs.docker.com/get-docker/)
 
-Next, open a terminal such as **PowerShell**, **Command Prompt**, or **bash**. Enter the following `dotnet` commands to create and run a C# application:
+Jalankan seluruh service di local pc dengan command docker compose.
 
-```dotnetcli
-dotnet new console --output sample1
-dotnet run --project sample1
+```sh
+docker-compose up -d
 ```
 
-You see the following output:
+## Run Jaeger in Kubernetes
 
-```output
-Hello World!
+### Prerequisites
+
+- Helm 3.0+
+
+### Installing the Chart
+
+Add OpenTelemetry Helm repository:
+
+```console
+helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm-charts
 ```
 
-Congratulations! You've created a simple .NET application.
+To install the chart with the release name my-opentelemetry-collector, run the following command:
+
+```console
+helm upgrade my-tracing open-telemetry/opentelemetry-collector
+```
+
 
 ## Next steps
 
 Get started developing .NET applications by following a [step-by-step tutorial](../standard/get-started.md) or by watching [.NET 101 videos](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWoazjhXQzBKMrFuArxpW80) on YouTube.
 
 ## Sources
-- a
-- b
-- c
+- https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/examples/tracing
+- https://github.com/open-telemetry/opentelemetry-helm-charts/tree/main/charts/opentelemetry-collector
