@@ -41,7 +41,7 @@ helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm
 Install chart dengan nama release my-tracing, dengan command berikut:
 
 ```console
-helm upgrade my-tracing open-telemetry/opentelemetry-collector
+helm upgrade -i my-tracing open-telemetry/opentelemetry-collector
 ```
 
 
