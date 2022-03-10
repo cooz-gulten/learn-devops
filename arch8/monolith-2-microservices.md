@@ -22,7 +22,8 @@ Microservices
 
 ### Migration Strategy
 
-1. Planning, Decompose modules and models with DDD
+
+1. Identify logical components, groups and dependencies with DDD
 
     1. Start with a *ubiquitous language*, a common vocabulary that is shared between all stakeholders.
 
