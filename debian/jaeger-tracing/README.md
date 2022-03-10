@@ -49,5 +49,5 @@ helm upgrade -i my-tracing open-telemetry/opentelemetry-collector
 
 
 ## Sources
-- https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/examples/tracing
-- https://github.com/open-telemetry/opentelemetry-helm-charts/tree/main/charts/opentelemetry-collector
+- [Open Telemetry Docker Compose](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/examples/tracing)
+- [Open Telemetry Helm Charts](https://github.com/open-telemetry/opentelemetry-helm-charts/tree/main/charts/opentelemetry-collector)
