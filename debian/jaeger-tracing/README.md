@@ -32,13 +32,13 @@ docker-compose up -d
 
 ### Installing the Chart
 
-Add OpenTelemetry Helm repository:
+Daftarkan open-telemetry Helm repository:
 
 ```console
 helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm-charts
 ```
 
-To install the chart with the release name my-opentelemetry-collector, run the following command:
+Install chart dengan nama release my-tracing, dengan command berikut:
 
 ```console
 helm upgrade my-tracing open-telemetry/opentelemetry-collector
