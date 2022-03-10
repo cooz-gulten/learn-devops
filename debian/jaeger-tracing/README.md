@@ -47,7 +47,6 @@ helm upgrade my-tracing open-telemetry/opentelemetry-collector
 
 ## Next steps
 
-Get started developing .NET applications by following a [step-by-step tutorial](../standard/get-started.md) or by watching [.NET 101 videos](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWoazjhXQzBKMrFuArxpW80) on YouTube.
 
 ## Sources
 - https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/examples/tracing
