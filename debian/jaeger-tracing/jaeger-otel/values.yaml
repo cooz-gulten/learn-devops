@@ -42,8 +42,8 @@ elasticsearch:
   global:
     kibanaEnabled: true
   master:
-    replicas: 1
+    replicas: 2
   coordinating:
     replicas: 1
   data:
-    replicas: 1
+    replicas: 2
