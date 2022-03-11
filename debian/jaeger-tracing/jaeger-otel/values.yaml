@@ -14,7 +14,7 @@ jaeger:
   storage:
     type: elasticsearch
     elasticsearch:
-      host: elasticsearch-master
+      host: my-tracing-coordinating-only
       port: 9200
 
 # elasticsearch elastic.co
