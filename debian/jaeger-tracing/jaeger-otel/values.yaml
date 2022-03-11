@@ -17,6 +17,7 @@ jaeger:
       host: elasticsearch-master
       port: 9200
 
+# elasticsearch elastic.co
 # elasticsearch:
 #   singleNode: true
 #   antiAffinity: "soft"
@@ -36,20 +37,13 @@ jaeger:
 #       requests:
 #         storage: 1Gi
 
+# elasticsearch bitnami
 elasticsearch:
-  singleNode: true
-  antiAffinity: "soft"
-  esJavaOpts: "-Xmx47m -Xms47m"
-  image: docker.elastic.co/elasticsearch/elasticsearch-oss
-  resources:
-    requests:
-      memory: "100Mi"
-      cpu: "10m"
-    limits:
-      memory: "512Mi"
-      cpu: "1"
-  volumeClaimTemplate:
-    accessModes: [ "ReadWriteOnce" ]
-    resources:
-      requests:
-        storage: 1Gi
+  global:
+    kibanaEnabled: true
+  master:
+    replicas: 1
+  coordinating:
+    replicas: 1
+  data:
+    replicas: 1
