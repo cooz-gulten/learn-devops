@@ -39,13 +39,16 @@ docker-compose up -d
 Daftarkan open-telemetry Helm repository:
 
 ```console
-helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm-charts
+helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm-charts &&\
+helm repo update
+
+
 ```
 
 Install chart dengan nama release my-tracing, dengan command berikut:
 
 ```console
-helm upgrade -i my-tracing open-telemetry/opentelemetry-collector
+helm upgrade -i my-tracing open-telemetry/opentelemetry-collector -f otel-values.yaml
 ```
 
 
@@ -56,3 +59,4 @@ helm upgrade -i my-tracing open-telemetry/opentelemetry-collector
 - [Open Telemetry Docker Compose](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/examples/tracing)
 - [Open Telemetry Helm Charts](https://github.com/open-telemetry/opentelemetry-helm-charts/tree/main/charts/opentelemetry-collector)
 - https://staffordwilliams.com/blog/2021/02/01/minimal-elasticsearch-resources-in-kubernetes/
+- https://github.com/eqfarhad/distributed_tracing
