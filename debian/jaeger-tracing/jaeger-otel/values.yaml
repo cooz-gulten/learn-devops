@@ -7,6 +7,17 @@ opentelemetry-collector:
     enabled: false
   standaloneCollector:
     enabled: true
+  config:
+    exporters:
+      jaeger:
+        endpoint: my-tracing-jaeger-collector:14250
+        insecure: true
+    service:
+      pipelines:
+        metrics: null
+        traces:
+          exporters:
+            - jaeger
 
 jaeger:
   provisionDataStore:
