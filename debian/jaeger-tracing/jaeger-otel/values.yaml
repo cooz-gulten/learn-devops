@@ -41,9 +41,9 @@ jaeger:
 elasticsearch:
   global:
     kibanaEnabled: true
-  master:
-    replicas: 2
-  coordinating:
-    replicas: 1
-  data:
-    replicas: 2
+  # master:
+  #   replicas: 2
+  # coordinating:
+  #   replicas: 1
+  # data:
+  #   replicas: 2
