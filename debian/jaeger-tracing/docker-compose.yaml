@@ -15,9 +15,10 @@ services:
       - 9411:9411
 
   otel-collector:
-    build:
-      context: ../..
-      dockerfile: examples/tracing/Dockerfile
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    image: otel/opentelemetry-collector
     command: ["--config=/etc/otel-collector-config.yml"]
     volumes:
       - ./otel-collector-config.yml:/etc/otel-collector-config.yml
