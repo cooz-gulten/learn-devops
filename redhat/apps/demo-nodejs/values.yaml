@@ -2,7 +2,9 @@
 image:
   name: docker.io/afandy/demo-nest-simple
   tag: v1
-build.enabled: false
-deploy.env:
-  - name: PORT
-    value: 8080
+build:
+  enabled: false
+deploy:
+  env:
+    - name: PORT
+      value: 8080
