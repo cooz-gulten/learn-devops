@@ -11,7 +11,7 @@ metadata:
         {
           "from":{
             "kind":"ImageStreamTag",
-            "name":"{{ include "99-bootstrap-cdn.imageName" . }}"
+            "name":"{{ include "99-base-chart.imageName" . }}"
           },
           "fieldPath":"spec.template.spec.containers[0].image"
         }
