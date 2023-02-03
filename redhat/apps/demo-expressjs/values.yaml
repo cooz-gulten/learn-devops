@@ -1,0 +1,6 @@
+
+image:
+  name: docker.io/cnservices/microservices-demo-nodejs
+  tag: latest
+build.enabled: false
+deploy.global.nameOverride: demo-express
