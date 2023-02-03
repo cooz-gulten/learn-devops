@@ -1,7 +1,7 @@
 
 image:
   name: docker.io/afandy/demo-nest-simple
-  tag: "1.0"
+  tag: latest
 build.enabled: false
 deploy.env:
   - name: PORT
