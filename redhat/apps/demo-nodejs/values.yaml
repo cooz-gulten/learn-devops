@@ -6,4 +6,3 @@ build.enabled: false
 deploy.env:
   - name: PORT
     value: 8080
-deploy.global.nameOverride: demo-nestjs
