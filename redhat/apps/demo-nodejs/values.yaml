@@ -8,3 +8,7 @@ deploy:
   env:
     - name: PORT
       value: "8080"
+  readinessProbe:
+    httpGet:
+      path: /api
+      port: http
