@@ -1,0 +1,2 @@
+# Logfile created on 2023-02-23 07:51:33 +0000 by logger.rb/v1.4.2
+{"severity":"INFO","time":"2023-02-23T07:51:33.671Z","correlation_id":"01GSYM33AV03ZJ5P4D5Q72T0W1","author_id":1,"author_name":"Administrator","entity_id":1,"entity_type":"User","created_at":"2023-02-23T07:51:33.669+00:00","with":"standard","target_id":1,"target_type":"User","target_details":"Administrator"}

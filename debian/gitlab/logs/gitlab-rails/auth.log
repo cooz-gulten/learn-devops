@@ -1,0 +1,10 @@
+# Logfile created on 2023-02-23 07:35:58 +0000 by logger.rb/v1.4.2
+{"severity":"INFO","time":"2023-02-23T07:35:58.999Z","correlation_id":null,"gitlab_throttle_user_allowlist":[]}
+{"severity":"INFO","time":"2023-02-23T07:37:47.606Z","correlation_id":null,"gitlab_throttle_user_allowlist":[]}
+{"severity":"INFO","time":"2023-02-23T07:38:14.314Z","correlation_id":null,"gitlab_throttle_user_allowlist":[]}
+{"severity":"INFO","time":"2023-02-23T07:38:24.548Z","correlation_id":null,"gitlab_throttle_user_allowlist":[]}
+{"severity":"INFO","time":"2023-02-23T07:38:54.531Z","correlation_id":null,"gitlab_throttle_user_allowlist":[]}
+{"severity":"INFO","time":"2023-02-23T07:40:18.970Z","correlation_id":null,"gitlab_throttle_user_allowlist":[]}
+{"severity":"INFO","time":"2023-02-23T07:40:19.807Z","correlation_id":null,"gitlab_throttle_user_allowlist":[]}
+{"severity":"INFO","time":"2023-02-23T07:40:33.727Z","correlation_id":null,"gitlab_throttle_user_allowlist":[]}
+{"severity":"INFO","time":"2023-02-23T07:41:05.239Z","correlation_id":null,"gitlab_throttle_user_allowlist":[]}

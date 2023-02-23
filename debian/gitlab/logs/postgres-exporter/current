@@ -1,0 +1,16 @@
+2023-02-23_07:39:50.13422 ts=2023-02-23T07:39:50.133Z caller=main.go:135 level=info msg="Listening on address" address=localhost:9187
+2023-02-23_07:39:50.13880 ts=2023-02-23T07:39:50.138Z caller=tls_config.go:195 level=info msg="TLS is disabled." http2=false
+2023-02-23_07:39:51.68923 ts=2023-02-23T07:39:51.566Z caller=server.go:74 level=info msg="Established new database connection" fingerprint=/var/opt/gitlab/postgresql:5432
+2023-02-23_07:39:51.68990 ts=2023-02-23T07:39:51.568Z caller=collector.go:196 level=error msg="collector failed" name=bgwriter duration_seconds=0.001869933 err="pq: the database system is starting up"
+2023-02-23_07:39:51.69084 ts=2023-02-23T07:39:51.579Z caller=collector.go:196 level=error msg="collector failed" name=database duration_seconds=0.012645785 err="pq: the database system is starting up"
+2023-02-23_07:39:53.24275 ts=2023-02-23T07:39:52.575Z caller=postgres_exporter.go:714 level=error err="Error opening connection to database (host=/var/opt/gitlab/postgresql%20user=gitlab-psql%20database=gitlabhq_production): pq: the database system is starting up"
+2023-02-23_07:40:06.54386 ts=2023-02-23T07:40:06.543Z caller=server.go:74 level=info msg="Established new database connection" fingerprint=/var/opt/gitlab/postgresql:5432
+2023-02-23_07:40:06.55012 ts=2023-02-23T07:40:06.549Z caller=collector.go:196 level=error msg="collector failed" name=bgwriter duration_seconds=0.006191386 err="pq: the database system is starting up"
+2023-02-23_07:40:06.55667 ts=2023-02-23T07:40:06.556Z caller=collector.go:196 level=error msg="collector failed" name=database duration_seconds=0.011971682 err="pq: the database system is starting up"
+2023-02-23_07:40:07.54856 ts=2023-02-23T07:40:07.548Z caller=postgres_exporter.go:714 level=error err="Error opening connection to database (host=/var/opt/gitlab/postgresql%20user=gitlab-psql%20database=gitlabhq_production): pq: the database system is starting up"
+2023-02-23_07:40:21.54317 ts=2023-02-23T07:40:21.543Z caller=server.go:74 level=info msg="Established new database connection" fingerprint=/var/opt/gitlab/postgresql:5432
+2023-02-23_07:40:21.59600 ts=2023-02-23T07:40:21.595Z caller=postgres_exporter.go:645 level=info msg="Semantic version changed" server=/var/opt/gitlab/postgresql:5432 from=0.0.0 to=13.8.0
+2023-02-23_07:40:29.41704 ts=2023-02-23T07:40:29.416Z caller=main.go:135 level=info msg="Listening on address" address=localhost:9187
+2023-02-23_07:40:29.41744 ts=2023-02-23T07:40:29.417Z caller=tls_config.go:195 level=info msg="TLS is disabled." http2=false
+2023-02-23_07:40:36.56310 ts=2023-02-23T07:40:36.563Z caller=server.go:74 level=info msg="Established new database connection" fingerprint=/var/opt/gitlab/postgresql:5432
+2023-02-23_07:40:36.61221 ts=2023-02-23T07:40:36.612Z caller=postgres_exporter.go:645 level=info msg="Semantic version changed" server=/var/opt/gitlab/postgresql:5432 from=0.0.0 to=13.8.0

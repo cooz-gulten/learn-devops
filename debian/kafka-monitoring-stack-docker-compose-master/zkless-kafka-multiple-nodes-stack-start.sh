@@ -20,9 +20,9 @@ DIR=$(readlink -f $0 | xargs dirname)
 
 echo -e "\n🐳 Starting Kafka Brokers..."
 
-docker-compose -f $DIR/zkless-kafka-multiple-nodes-stack.yml -f "$DIR/kafka-ui.yml" up -d
+docker-compose -f $DIR/zkless-kafka-multiple-nodes-stack.yml -f "$DIR/kafka-ui-multiple.yml" up -d
 
-docker-compose -f $DIR/zkless-kafka-multiple-nodes-stack.yml -f "$DIR/kafka-ui.yml" ps
+docker-compose -f $DIR/zkless-kafka-multiple-nodes-stack.yml -f "$DIR/kafka-ui-multiple.yml" ps
 
 echo -e "\n------------------------------------------------------------------------------------------------------"
 echo -e "Grafana (Login : admin / Password : kafka) : http://localhost:3000"
